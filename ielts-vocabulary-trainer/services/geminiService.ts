@@ -2,16 +2,16 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import type { Exercise } from '../types';
 
-const API_KEY = process.env.API_KEY;
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 
-if (!API_KEY) {
-  console.warn("API_KEY is not set. Please set the environment variable.");
+if (!GEMINI_API_KEY) {
+  console.warn("GEMINI_API_KEY is not set. Please set the environment variable.");
 }
 
-const ai = new GoogleGenAI({ apiKey: API_KEY! });
+const ai = new GoogleGenAI({ apiKey: GEMINI_API_KEY! });
 
 export const generateExercise = async (words: string[]): Promise<Exercise | null> => {
-  if (!API_KEY) {
+  if (!GEMINI_API_KEY) {
     throw new Error("Gemini API key is not configured.");
   }
   

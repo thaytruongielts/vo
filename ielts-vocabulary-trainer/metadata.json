@@ -1,0 +1,5 @@
+{
+  "name": "IELTS Vocabulary Trainer",
+  "description": "An interactive application to practice 1200 essential IELTS listening vocabulary words through AI-generated exercises. Select categories, and the app will create fill-in-the-blank sentences to test your knowledge in context.",
+  "requestFramePermissions": []
+}
